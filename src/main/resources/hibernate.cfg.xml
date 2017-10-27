@@ -5,6 +5,7 @@
 
 <hibernate-configuration>
     <session-factory>
+        <property name="connection.characterEncoding">UTF-8</property>
         <property name="hibernate.dialect">
             org.hibernate.dialect.MySQL5Dialect
         </property>
