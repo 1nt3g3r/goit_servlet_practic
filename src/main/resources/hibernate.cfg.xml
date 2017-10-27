@@ -13,17 +13,12 @@
             com.mysql.jdbc.Driver
         </property>
 
-        <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/servlet_tutorial
-        </property>
+        <!-- Автоматичне створення і оновлення структури БД -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <property name="hibernate.connection.username">
-            root
-        </property>
-
-        <property name="hibernate.connection.password">
-            pass
-        </property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/hib_test</property>
+        <property name="hibernate.connection.username">hib_user</property>
+        <property name="hibernate.connection.password">hib_pass</property>
 
         <mapping class="net.proselyte.customer.model.Customer"/>
     </session-factory>

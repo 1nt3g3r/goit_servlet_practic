@@ -39,7 +39,7 @@
 
     </dependencies>
     <build>
-        <finalName>Customer</finalName>
+        <finalName>customer</finalName>
 
         <plugins>
             <!-- Tomcat plugin -->
@@ -49,9 +49,19 @@
                 <version>${tomcat.plugin.version}</version>
                 <configuration>
                     <path>/</path>
-                    <port>8088</port>
+                    <port>8080</port>
                 </configuration>
             </plugin>
+
+             <!-- Use JDK 7 instead of default Maven-->
+            <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                            <version>2.3.2</version>
+                            <configuration>
+                                    <source>1.7</source>
+                                    <target>1.7</target>
+                            </configuration>
+                </plugin>
         </plugins>
     </build>
 </project>
